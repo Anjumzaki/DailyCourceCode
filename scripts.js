@@ -236,19 +236,61 @@ function calculateAreaOfCircle(radius) {
 // alert(month)
 // alert(months[month])
 
-var expandedParagraph = "Slow lorises are a group of several species of trepsirrhine primates which make up the genus Nycticebus.They have a round head, narrow snout, large eyes, and a variety of distinctive coloration patterns that are species - dependent.The hands and feet of slow lorises have several adaptations that give them a pincer - like grip and enable them to grasp branches for long periods of time. low lorises have a toxic bite, a rare trait among mammals.";
-function expand(){
-    var para = document.getElementById('para');
-    para.innerHTML = expandedParagraph
-}
+// var expandedParagraph = "Slow lorises are a group of several species of trepsirrhine primates which make up the genus Nycticebus.They have a round head, narrow snout, large eyes, and a variety of distinctive coloration patterns that are species - dependent.The hands and feet of slow lorises have several adaptations that give them a pincer - like grip and enable them to grasp branches for long periods of time. low lorises have a toxic bite, a rare trait among mammals.";
+// function expand(){
+//     var para = document.getElementById('para');
+//     para.innerHTML = expandedParagraph
+// }
 
-function big(){
-    var para = document.getElementById('para');
-    para.className = para.className + ' bigFont'
-}
-function red(){
-    var para = document.getElementById('para');
-    para.className = para.className + ' redColor'
+// function big(){
+//     var para = document.getElementById('para');
+//     para.className = para.className + ' bigFont'
+// }
+// function red(){
+//     var para = document.getElementById('para');
+//     para.className = para.className + ' redColor'
 
-    // para.className += 'redColor's
+//     // para.className += 'redColor's
+// }
+
+
+// function here() {
+//     var d = document.getElementById("humpty");
+//     var pCounter = 0; //2
+//     for (var i = 0; i < d.childNodes.length; i++) {
+//         if (d.childNodes[i].nodeType === 1) {
+//             pCounter++;
+//         }
+//         if (pCounter === 2) {
+//             d.childNodes[i].innerHTML = "All his men.";
+//             break;
+//         }
+//     }
+// }
+// <div id="humpty">
+// <p>All the king's horses.</p>
+// <p>All the dude's crew.</p>
+// <p>All the town's orthopedists.</p>
+// </div>
+
+function addNode() {
+    var myElement = document.getElementById('element_Name').value
+    var myText = document.getElementById('my_text').value
+    var myPara = document.createElement(myElement);  //<p></p>
+    var txt = document.createTextNode(myText)  //  My para inner text
+    myPara.appendChild(txt) // <p>My para inner text</P>
+    var parent = document.getElementById('humpty')   // <element id="humpty">
+    parent.appendChild(myPara)
+}
+function addSelect() {
+
+    for (var i = 0; i < 32; i++) {
+      
+        var mySelect = document.createElement('option')
+        var myTxt = document.createTextNode(i)
+        mySelect.appendChild(myTxt)
+        var myEle = document.getElementById('myPara');
+        myEle.appendChild(mySelect)
+        console.log('asd')
+    }
 }
