@@ -272,20 +272,19 @@ function calculateAreaOfCircle(radius) {
 // <p>All the dude's crew.</p>
 // <p>All the town's orthopedists.</p>
 // </div>
-
 function addNode() {
     var myElement = document.getElementById('element_Name').value
     var myText = document.getElementById('my_text').value
+    var myId = document.getElementById('my_Id').value
     var myPara = document.createElement(myElement);  //<p></p>
+    myPara.setAttribute("id", myId);
     var txt = document.createTextNode(myText)  //  My para inner text
-    myPara.appendChild(txt) // <p>My para inner text</P>
+    myPara.appendChild(txt) // <p>My para inner text</p>
     var parent = document.getElementById('humpty')   // <element id="humpty">
     parent.appendChild(myPara)
 }
 function addSelect() {
-
     for (var i = 0; i < 32; i++) {
-      
         var mySelect = document.createElement('option')
         var myTxt = document.createTextNode(i)
         mySelect.appendChild(myTxt)
@@ -293,4 +292,10 @@ function addSelect() {
         myEle.appendChild(mySelect)
         console.log('asd')
     }
+}
+function addnewHtml(){
+    var myId = document.getElementById('element_Id').value;
+    var myInner = document.getElementById('innerAlter').value;
+    var selectElement = document.getElementById(myId);
+    selectElement.innerHTML = myInner
 }
