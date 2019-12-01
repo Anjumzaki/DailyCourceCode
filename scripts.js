@@ -272,30 +272,106 @@ function calculateAreaOfCircle(radius) {
 // <p>All the dude's crew.</p>
 // <p>All the town's orthopedists.</p>
 // </div>
-function addNode() {
-    var myElement = document.getElementById('element_Name').value
-    var myText = document.getElementById('my_text').value
-    var myId = document.getElementById('my_Id').value
-    var myPara = document.createElement(myElement);  //<p></p>
-    myPara.setAttribute("id", myId);
-    var txt = document.createTextNode(myText)  //  My para inner text
-    myPara.appendChild(txt) // <p>My para inner text</p>
-    var parent = document.getElementById('humpty')   // <element id="humpty">
-    parent.appendChild(myPara)
-}
-function addSelect() {
-    for (var i = 0; i < 32; i++) {
-        var mySelect = document.createElement('option')
-        var myTxt = document.createTextNode(i)
-        mySelect.appendChild(myTxt)
-        var myEle = document.getElementById('myPara');
-        myEle.appendChild(mySelect)
-        console.log('asd')
+// function addNode() {
+//     var myElement = document.getElementById('element_Name').value
+//     var myText = document.getElementById('my_text').value
+//     var myId = document.getElementById('my_Id').value
+//     var myPara = document.createElement(myElement);  //<p></p>
+//     myPara.setAttribute("id", myId);
+//     var txt = document.createTextNode(myText)  //  My para inner text
+//     myPara.appendChild(txt) // <p>My para inner text</p>
+//     var parent = document.getElementById('humpty')   // <element id="humpty">
+//     parent.appendChild(myPara)
+// }
+// function addSelect() {
+//     for (var i = 0; i < 32; i++) {
+//         var mySelect = document.createElement('option')
+//         var myTxt = document.createTextNode(i)
+//         mySelect.appendChild(myTxt)
+//         var myEle = document.getElementById('myPara');
+//         myEle.appendChild(mySelect)
+//         console.log('asd')
+//     }
+// }
+// function addnewHtml(){
+//     var myId = document.getElementById('element_Id').value;
+//     var myInner = document.getElementById('innerAlter').value;
+//     var selectElement = document.getElementById(myId);
+//     selectElement.innerHTML = myInner
+// }
+// var createdIDs = []
+// function addDiv() {
+//     var divId = document.getElementById('text_id').value
+//     var found
+//     for (var i = 0; i <= createdIDs.length; i++) {
+//         if (createdIDs[i] == divId) {
+//             found = true
+//             break;
+//         }
+//     }
+//     if (found) {
+//         alert('already exist with same Id')
+//     }
+//     else {
+//         var innerDiv = document.createElement('div')
+//         innerDiv.setAttribute('id', divId)
+//         innerDiv.setAttribute('class', 'myClass')
+//         innerDiv.innerHTML = divId
+//         innerDiv.style.backgroundColor = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6)
+//         var wrapDiv = document.getElementById('wrapDiv')
+//         wrapDiv.appendChild(innerDiv)
+//         createdIDs.push(divId)
+//     }
+//     divId = ''
+// }
+// function removeDiv(){
+//     var found;
+//     var index
+//     var reDiv = document.getElementById('remove_id').value
+//     for (var i = 0; i <= createdIDs.length; i++) {
+//         if (createdIDs[i] == reDiv) {
+//             found = true
+//             index = i
+//             break;
+//         }
+//     }
+//     if(found){
+//         document.getElementById(reDiv).remove()
+//         createdIDs.splice(index, 1);
+//     }
+//     else{
+//         alert('DIV NOT FOUND')
+//     }
+//     reDiv = ''
+// }
+
+var plan1 = {
+    name: 'basic',
+    monthly: 3.99,
+    data: 100,
+    dataTransfer: 1000,
+    pages: 10,
+    discountedMonths: [0, 5, 11],
+    printAnual: function () {
+        alert('your plan is ' + this.name)
     }
 }
-function addnewHtml(){
-    var myId = document.getElementById('element_Id').value;
-    var myInner = document.getElementById('innerAlter').value;
-    var selectElement = document.getElementById(myId);
-    selectElement.innerHTML = myInner
+
+// alert(plan1.name)
+// alert(plan1.printAnual())
+
+function Car(name, company, power, millage, price) {
+        this.carName = name,
+        this.carCompany = company,
+        this.carPower = power,
+        this.carMillage = millage,
+        this.carPrice = price
 }
+var arifKiCar = new Car('Civic', 'Honda', '1600cc', '5km', 4200000);
+var waqasKiCar = new Car('M7', 'BMW', '3600cc', '0.5km', 25000000);
+console.log(waqasKiCar)
+alert(arifKiCar.carName)
+alert(arifKiCar.carPrice)
+alert(waqasKiCar.carCompany)
+
+
